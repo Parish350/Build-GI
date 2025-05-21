@@ -6,9 +6,9 @@ mai.title("Mass")
 mai.geometry("250x150")
 def submit_grams():
     choice = enterthegrams.get() 
-    choice = int(choice)
+    choice = float(choice)
     #(1/453.6) + 32 = 0.00220462
-    text = (choice * 1/453.6) + 32
+    text = (choice * 1/453.6) 
     pound.config(text = f"grams in pounds:{text}")
 
 title1 = Label (mai, text = "Mass",fg = "gray93" ,bg="gray25", font = ( "times",28,"bold")) 
