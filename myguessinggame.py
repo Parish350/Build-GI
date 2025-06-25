@@ -25,5 +25,7 @@ guess.place(x = 550, y = 300)
 number = Entry(gui)
 number.place(x = 300, y = 330)
 
+exit = Button (gui,text ="exit", width = 15 ,bg = "gray99", fg = "SpringGreen2" , command = exit)
+exit.place(x = 400, y = 250)
 
 gui.mainloop()
