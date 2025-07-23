@@ -12,6 +12,13 @@ from tkinter.ttk import*
 from tkinter.filedialog import*
 
 
+def openFile():
+  fin=askopenfile(title='Open File')
+  if fin is not None:
+   items = fin.readlines()
+   memorizerbox.delete(0,END)
+   for item in items:
+     memorizerbox.insert(END, item.strip())
 
 
 def delete_memorizer():
@@ -33,7 +40,7 @@ title2 = Button (root, text = "Delete", command = delete_memorizer)
 title2.place(x = 200 , y = 100)
 title3 = Button (root, text = "Add", command = add_memorizer)
 title3.place(x = 100 , y = 150)
-title4 = Button (root, text = "Open") 
+title4 = Button (root, text = "Open", command = openFile) 
 title4.place(x = 300 , y = 100)
 memorizerinput = Entry()
 memorizerinput.place(x = 200 , y = 150)
