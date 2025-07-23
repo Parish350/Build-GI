@@ -33,6 +33,15 @@ def saveFile():
    print(item.strip(),file=file)
  memorizerbox.delete(0,END)
 
+def add_colour():
+ colour = memorizerinput.get()
+ memorizerbox.insert(END,colour)
+ memorizerinput.delete(0,END)
+
+def remove_memorizer():
+ item = memorizerbox.curselection()
+ if item:
+  memorizerbox.remove(item)
 
 title1 = Button (root, text = "Save", command = saveFile) 
 title1.place(x = 100 , y = 100)
@@ -42,6 +51,10 @@ title3 = Button (root, text = "Add", command = add_memorizer)
 title3.place(x = 100 , y = 150)
 title4 = Button (root, text = "Open", command = openFile) 
 title4.place(x = 300 , y = 100)
+title5 = Button (root, text = "Add Colour:", command = add_colour)
+title5.place(x = 400 , y = 450)
+title6 = Button (root, text = "Remove", command = remove_memorizer)
+title6.place(x = 400 , y = 500)
 memorizerinput = Entry()
 memorizerinput.place(x = 200 , y = 150)
 frame = Frame(root)
