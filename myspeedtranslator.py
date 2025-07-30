@@ -1,7 +1,6 @@
-from gtts import gTTS
-from translate import Translator
-import os
 from tkinter import*
+import tkinter.messagebox
+
 gui = Tk()
 gui.config(background="medium spring green")
 gui.title("Text to Speech Converter")
@@ -13,5 +12,7 @@ r2=Radiobutton(gui,text='French',variable=selection,value='fr')
 r2.place(x = 200 ,y = 100)
 r3=Radiobutton(gui,text='Tamil',variable=selection,value='ta')
 r3.place(x = 300 ,y = 100)
+submit = Button (gui,text ="submit")
+submit.place(x = 400, y = 100)
 gui.geometry("250x140")
 gui.mainloop()
