@@ -1,5 +1,7 @@
 from tkinter import*
 import tkinter.messagebox
+from gtts import gTTS
+from translate import Translator
 
 gui = Tk()
 gui.config(background="medium spring green")
@@ -14,7 +16,14 @@ r3=Radiobutton(gui,text='Tamil',variable=selection,value='ta')
 r3.place(x = 300 ,y = 100)
 radiobutton = Entry()
 radiobutton.place(x = 200 , y = 150)
-submit = Button (gui,text ="submit")
-submit.place(x = 400, y = 100)
+def play():
+    translator = Translator(to_lang=selection.get())
+    text_to_translate = radiobutton.get()
+    translated_text = translator.translate(text_to_translate)
+    myobj = gTTS(text=translated_text,lang=selection.get(),slow=False)
+    myobj.save("convert.mp3")
+
+submit = Button (gui,text ="submit",command = play)
+submit.place(x = 200, y = 250)
 gui.geometry("250x140")
 gui.mainloop()
