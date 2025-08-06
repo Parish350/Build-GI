@@ -7,7 +7,7 @@ gui = Tk()
 gui.config(background="medium spring green")
 gui.title("Text to Speech Converter")
 selection=StringVar()
-world={'Spanish':'es','French':'fr','Tamil':'ta'}
+world={'Spanish':'es','French':'fr','German':'de'}
 r1=Radiobutton(gui,text='Spanish',variable=selection,value='es')
 r1.place(x = 100 ,y = 100)
 r2=Radiobutton(gui,text='French',variable=selection,value='fr')
