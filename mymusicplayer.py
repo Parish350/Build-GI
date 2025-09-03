@@ -70,9 +70,9 @@ title6 = Button(gui, text = "Pause ⏸️",fg = "purple" ,bg="turquoise1", font 
 title6.place(x = 300 , y = 200)
 title7 = Button(gui, text = "Next ⏭️",fg = "purple" ,bg="turquoise1", font = ( "times",28,"bold"), command = next_song) 
 title7.place(x = 300 , y = 300)
-title8 = Label(gui, text = "Volume",fg = "purple" ,bg="turquoise1", font = ( "times",28,"bold"), command = set_volume) 
+title8 = Label(gui, text = "Volume",fg = "purple" ,bg="turquoise1", font = ( "times",28,"bold")) 
 title8.place(x = 500 , y = 300)
-title9 = Scale(gui, from_=0, to=100,orient="horizontal")
+title9 = Scale(gui, from_=0, to=100,orient="horizontal", command = set_volume)
 title9.place(x = 500 , y = 350)
 
 gui.mainloop()
